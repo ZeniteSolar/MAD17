@@ -8,7 +8,6 @@
 *.atsuo
 
 
-MCC17/
 MCC17/Debug/
 MCC17/Debug/Debug/*
 MCC17/*.cproj
