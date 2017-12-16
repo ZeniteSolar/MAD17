@@ -2,9 +2,9 @@
 
 /**
  * @brief Prints a can message via usart
- */
+ */ 
 inline void can_app_print_msg(can_t *msg)
-{
+{/*
     usart_send_string("ID: ");
     usart_send_uint16(msg->id);
     usart_send_string(". D: ");
@@ -19,7 +19,7 @@ inline void can_app_print_msg(can_t *msg)
     usart_send_uint16(err.rx);
     usart_send_char(' ');
     usart_send_uint16(err.tx);
-    usart_send_char('\n');
+    usart_send_char('\n');*/
 }
 
 /**
@@ -30,13 +30,13 @@ inline void can_app_task(void)
     check_can();
 
     if(can_app_send_state_clk_div++ >= CAN_APP_SEND_STATE_CLK_DIV){
-        VERBOSE_MSG_CAN_APP(usart_send_string("state msg was sent.\n"));
+        //VERBOSE_MSG_CAN_APP(usart_send_string("state msg was sent.\n"));
         
         can_app_send_state_clk_div = 0;
     }
 
     if(can_app_send_motor_clk_div++ >= CAN_APP_SEND_MOTOR_CLK_DIV){
-        VERBOSE_MSG_CAN_APP(usart_send_string("motor msg was sent.\n"));
+        //VERBOSE_MSG_CAN_APP(usart_send_string("motor msg was sent.\n"));
         //can_app_send_motor();
         can_app_send_motor_clk_div = 0;
     }
@@ -80,12 +80,12 @@ inline void can_app_msg_extractors_switch(can_t *msg)
     if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MAM17){
         switch(msg->id){
             case CAN_FILTER_MSG_MAM17_MOTOR:
-                VERBOSE_MSG_CAN_APP(usart_send_string("got a motor msg: "));
+                //VERBOSE_MSG_CAN_APP(usart_send_string("got a motor msg: "));
                 VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 can_app_extractor_mic17_motor(msg);
                 break;
             default:
-                VERBOSE_MSG_CAN_APP(usart_send_string("got a unknown msg: "));
+                //VERBOSE_MSG_CAN_APP(usart_send_string("got a unknown msg: "));
                 VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 break;
         }    

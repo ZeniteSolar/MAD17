@@ -47,9 +47,9 @@ inline void check_pwm_fault(void)
  */
 inline void check_buffers(void)
 {
-    VERBOSE_MSG_MACHINE(usart_send_string("Checking buffers..."));
+    //VERBOSE_MSG_MACHINE(usart_send_string("Checking buffers..."));
     //while(!CBUF_IsFull(cbuf_adc0));
-    VERBOSE_MSG_ERROR(usart_send_string("<No buffers to check>"));
+    //VERBOSE_MSG_ERROR(usart_send_string("<No buffers to check>"));
     //VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n")); 
 }
 
@@ -58,9 +58,9 @@ inline void check_buffers(void)
  */
 inline void check_idle_current(void)
 {
-    VERBOSE_MSG_MACHINE(usart_send_string("Checking motor current levels..."));
+    //VERBOSE_MSG_MACHINE(usart_send_string("Checking motor current levels..."));
     //if(motor_current <= MAXIMUM_OFF_CURRENT);
-        VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
+        //VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
     //else error_flag: motor_current at off_state bigger than it should be. 
 }
 
@@ -69,9 +69,9 @@ inline void check_idle_current(void)
  */
 inline void check_idle_voltage(void)
 {
-    VERBOSE_MSG_MACHINE(usart_send_string("Checking motor voltage levels..."));
+    //VERBOSE_MSG_MACHINE(usart_send_string("Checking motor voltage levels..."));
     //if(output_voltage <= MAXIMUM_OFF_VOLTAGE);
-        VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
+        //VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
     //else error_flag: motor_voltage at off_state bigger than it should be.
 }
 
@@ -80,9 +80,9 @@ inline void check_idle_voltage(void)
  */
 inline void check_idle_temperature(void)
 {
-    VERBOSE_MSG_MACHINE(usart_send_string("Checking motor temperature levels..."));
+    //VERBOSE_MSG_MACHINE(usart_send_string("Checking motor temperature levels..."));
     //if(temperature <= MAXIMUM_OFF_TEMPERATURE);
-        VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
+        //VERBOSE_MSG_MACHINE(usart_send_string(" \t\tdone.\n"));
     //else error_flag: motor_temperature at off_state bigger than it should be.
 }
  
@@ -185,7 +185,7 @@ inline void print_system_flags(void)
 * @brief prints the error flags
 */
 inline void print_error_flags(void)
-{
+{/*
     VERBOSE_MSG_MACHINE(usart_send_string("\nOvrI: "));
     VERBOSE_MSG_MACHINE(usart_send_char(48+error_flags.overcurrent));
     
@@ -196,14 +196,14 @@ inline void print_error_flags(void)
     VERBOSE_MSG_MACHINE(usart_send_char(48+error_flags.overheat));
 
     VERBOSE_MSG_MACHINE(usart_send_string(" NOCAN: "));
-    VERBOSE_MSG_MACHINE(usart_send_char(48+error_flags.no_canbus));
+    VERBOSE_MSG_MACHINE(usart_send_char(48+error_flags.no_canbus));*/
 }
  
 /**
 * @brief prints the error flags
 */
 inline void print_control(void)
-{
+{/*
     VERBOSE_MSG_MACHINE(usart_send_string("D: "));
     VERBOSE_MSG_MACHINE(usart_send_uint16(control.D_raw));
     VERBOSE_MSG_MACHINE(usart_send_char(' '));
@@ -225,7 +225,7 @@ inline void print_control(void)
     VERBOSE_MSG_MACHINE(usart_send_uint16(control.R));
 
     VERBOSE_MSG_MACHINE(usart_send_string(" T: "));
-    VERBOSE_MSG_MACHINE(usart_send_uint16(control.T));
+    VERBOSE_MSG_MACHINE(usart_send_uint16(control.T));*/
 } 
 
 /**
@@ -249,11 +249,11 @@ inline void task_initializing(void)
     //check_idle_temperature();
        
     if(!error_flags.all){
-        VERBOSE_MSG_INIT(usart_send_string("System initialized without errors.\n"));
+        //VERBOSE_MSG_INIT(usart_send_string("System initialized without errors.\n"));
         set_state_idle();
     }
     else{
-        VERBOSE_MSG_ERROR(usart_send_string("Sorry. I have have found errors in the initialilation process. \n\nI will begin to process it...\n"));
+        //VERBOSE_MSG_ERROR(usart_send_string("Sorry. I have have found errors in the initialilation process. \n\nI will begin to process it...\n"));
         set_state_error();
     }
 }
@@ -272,7 +272,7 @@ inline void task_idle(void)
         led_clk_div = 0;
     }
 
-    VERBOSE_MSG_MACHINE(usart_send_string("Enjoy, the system is at its RUNNING STATE!!\n"));
+    //VERBOSE_MSG_MACHINE(usart_send_string("Enjoy, the system is at its RUNNING STATE!!\n"));
     set_state_running();
 }
 
@@ -321,7 +321,7 @@ inline void task_error(void)
 
 
     total_errors++;         // incrementa a contagem de erros
-    VERBOSE_MSG_ERROR(usart_send_string("The error code is: "));
+    /*VERBOSE_MSG_ERROR(usart_send_string("The error code is: "));
     VERBOSE_MSG_ERROR(usart_send_uint16(error_flags.all));
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
 
@@ -344,9 +344,9 @@ inline void task_error(void)
     
     if(total_errors < 2){
         VERBOSE_MSG_ERROR(usart_send_string("I will reset the machine state.\n"));
-    }
+    }*/
     if(total_errors >= 20){
-        VERBOSE_MSG_ERROR(usart_send_string("The watchdog will reset the whole system.\n"));
+        //VERBOSE_MSG_ERROR(usart_send_string("The watchdog will reset the whole system.\n"));
         for(;;);    // waits the watchdog to reset.
     }
     
