@@ -1,0 +1,18 @@
+#ignore everything
+*
+#but not these files
+!.gitignore
+!README.md
+!LICENSE
+
+!MCC17/
+!MCC17/lib/
+!MCC17/lib/*.h
+!MCC17/lib/*.a
+
+!MCC17/
+!MCC17/src/
+!MCC17/src/*.c
+!MCC17/src/*.h
+
+!*.pdf
