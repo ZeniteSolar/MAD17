@@ -1,0 +1,892 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+                              src/main.o (can_init)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+                              src/can_app.o (can_check_message)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+                              src/can_app.o (can_get_message)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+                              src/main.o (can_static_filter)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+                              C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o) (mcp2515_read_id)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+                              src/can_app.o (can_read_error_register)
+C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+                              C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o) (mcp2515_spi_init)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                              src/can_app.o (__do_copy_data)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                              src/adc.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                              src/usart.o (__umulhisi3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+                              src/bt.o (__adddi3_s8)
+
+Allocating common symbols
+Common symbol       size              file
+
+control             0x15              src/bt.o
+mpackage            0x24              src/bt.o
+cbuf_adc5           0x22              src/adc.o
+cbuf_adc1           0x22              src/adc.o
+timestamp           0x8               src/bt.o
+can_app_checks_without_mic17_msg
+                    0x2               src/bt.o
+led_clk_div         0x1               src/bt.o
+system_flags        0x1               src/bt.o
+avg_adc1            0x1               src/adc.o
+cbuf_adc2           0x22              src/adc.o
+avg_adc4            0x1               src/adc.o
+state_machine       0x1               src/bt.o
+can_app_send_state_clk_div
+                    0x1               src/bt.o
+cbuf_adc4           0x22              src/adc.o
+error_flags         0x1               src/bt.o
+machine_clk         0x1               src/bt.o
+avg_adc2            0x1               src/adc.o
+avg_adc5            0x1               src/adc.o
+total_errors        0x1               src/bt.o
+can_app_send_motor_clk_div
+                    0x1               src/bt.o
+cbuf_adc3           0x22              src/adc.o
+cbuf_adc0           0x22              src/adc.o
+avg_adc0            0x1               src/adc.o
+avg_adc3            0x1               src/adc.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .text          0x00000000        0x0 src/adc.o
+ .data          0x00000000        0x0 src/adc.o
+ .bss           0x00000000        0x0 src/adc.o
+ .text.init_buffers
+                0x00000000       0x32 src/adc.o
+ .text          0x00000000        0x0 src/bt.o
+ .data          0x00000000        0x0 src/bt.o
+ .bss           0x00000000        0x0 src/bt.o
+ .bss.ADC_CHANNEL
+                0x00000000        0x1 src/bt.o
+ .text          0x00000000        0x0 src/can_app.o
+ .data          0x00000000        0x0 src/can_app.o
+ .bss           0x00000000        0x0 src/can_app.o
+ .rodata.str1.1
+                0x00000000       0x13 src/can_app.o
+ .text.can_app_print_msg
+                0x00000000       0x7a src/can_app.o
+ .text.can_app_extractor_mic17_motor
+                0x00000000       0x24 src/can_app.o
+ .text.can_app_msg_extractors_switch
+                0x00000000       0x1e src/can_app.o
+ .text.check_can
+                0x00000000       0x56 src/can_app.o
+ .bss.ADC_CHANNEL
+                0x00000000        0x1 src/can_app.o
+ .text          0x00000000        0x0 src/machine.o
+ .data          0x00000000        0x0 src/machine.o
+ .bss           0x00000000        0x0 src/machine.o
+ .text.check_pwm_fault
+                0x00000000        0x2 src/machine.o
+ .text.check_idle_current
+                0x00000000        0x2 src/machine.o
+ .text.check_idle_voltage
+                0x00000000        0x2 src/machine.o
+ .text.set_state_error
+                0x00000000        0x8 src/machine.o
+ .text.set_state_initializing
+                0x00000000        0x6 src/machine.o
+ .text.set_state_idle
+                0x00000000        0x8 src/machine.o
+ .text.set_state_running
+                0x00000000        0x8 src/machine.o
+ .text.print_system_flags
+                0x00000000        0x2 src/machine.o
+ .text.print_error_flags
+                0x00000000        0x2 src/machine.o
+ .text.print_control
+                0x00000000        0x2 src/machine.o
+ .text.task_initializing
+                0x00000000       0x42 src/machine.o
+ .text.task_idle
+                0x00000000       0x24 src/machine.o
+ .text.task_running
+                0x00000000       0x52 src/machine.o
+ .text.task_error
+                0x00000000       0x3a src/machine.o
+ .bss.ADC_CHANNEL
+                0x00000000        0x1 src/machine.o
+ .text          0x00000000        0x0 src/main.o
+ .data          0x00000000        0x0 src/main.o
+ .bss           0x00000000        0x0 src/main.o
+ .bss.ADC_CHANNEL
+                0x00000000        0x1 src/main.o
+ .text          0x00000000        0x0 src/PeO.o
+ .data          0x00000000        0x0 src/PeO.o
+ .bss           0x00000000        0x0 src/PeO.o
+ .text.pertub_and_observe
+                0x00000000       0x62 src/PeO.o
+ .bss.pi_med_old.2055
+                0x00000000        0x1 src/PeO.o
+ .bss.ADC_CHANNEL
+                0x00000000        0x1 src/PeO.o
+ .debug_info    0x00000000      0x774 src/PeO.o
+ .debug_abbrev  0x00000000      0x14d src/PeO.o
+ .debug_loc     0x00000000       0x2f src/PeO.o
+ .debug_aranges
+                0x00000000       0x20 src/PeO.o
+ .debug_ranges  0x00000000       0x10 src/PeO.o
+ .debug_line    0x00000000      0x10f src/PeO.o
+ .debug_str     0x00000000      0x503 src/PeO.o
+ .comment       0x00000000       0x31 src/PeO.o
+ .debug_frame   0x00000000       0x30 src/PeO.o
+ .text          0x00000000        0x0 src/usart.o
+ .data          0x00000000        0x0 src/usart.o
+ .bss           0x00000000        0x0 src/usart.o
+ .text.usart_send_char
+                0x00000000       0x10 src/usart.o
+ .text.usart_receive_char
+                0x00000000       0x10 src/usart.o
+ .text.usart_send_uint16
+                0x00000000       0xd0 src/usart.o
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .text          0x00000000       0x24 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_info    0x00000000      0x10d C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_abbrev  0x00000000       0xc9 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_loc     0x00000000       0x7d C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_aranges
+                0x00000000       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_line    0x00000000       0xda C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_str     0x00000000      0x19f C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .comment       0x00000000       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .debug_frame   0x00000000       0x38 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_error_register.o)
+ .data          0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+ .bss           0x00000000        0x0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.mul
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000003         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+LOAD src/adc.o
+LOAD src/bt.o
+LOAD src/can_app.o
+LOAD src/machine.o
+LOAD src/main.o
+LOAD src/PeO.o
+LOAD src/usart.o
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5\libatmega328p.a
+END GROUP
+                0x00020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                0x0000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xc68
+ *(.vectors)
+ .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x00000068                . = ALIGN (0x2)
+                0x00000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000068        0x0 linker stubs
+ *(.trampolines*)
+                0x00000068                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data.can_filter
+                0x00000068       0x20 src/main.o
+                0x00000068                can_filter
+ .progmem.data  0x00000088       0x18 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+                0x00000088                _mcp2515_cnf
+                0x000000a0                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000a0                __ctors_start = .
+ *(.ctors)
+                0x000000a0                __ctors_end = .
+                0x000000a0                __dtors_start = .
+ *(.dtors)
+                0x000000a0                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000a0        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x000000a0                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000a0        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ .init3         0x000000ac       0x18 src/main.o
+                0x000000ac                wdt_first
+ *(.init3)
+ *(.init4)
+ .init4         0x000000c4       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x000000c4                __do_copy_data
+ .init4         0x000000da       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x000000da                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000ea        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x000000f2        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x000000f2                __vector_22
+                0x000000f2                __vector_1
+                0x000000f2                __vector_24
+                0x000000f2                __vector_12
+                0x000000f2                __bad_interrupt
+                0x000000f2                __vector_6
+                0x000000f2                __vector_3
+                0x000000f2                __vector_23
+                0x000000f2                __vector_25
+                0x000000f2                __vector_11
+                0x000000f2                __vector_13
+                0x000000f2                __vector_17
+                0x000000f2                __vector_19
+                0x000000f2                __vector_5
+                0x000000f2                __vector_4
+                0x000000f2                __vector_9
+                0x000000f2                __vector_2
+                0x000000f2                __vector_15
+                0x000000f2                __vector_8
+                0x000000f2                __vector_10
+                0x000000f2                __vector_16
+                0x000000f2                __vector_18
+                0x000000f2                __vector_20
+ .text          0x000000f6      0x180 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+                0x000000f6                mcp2515_write_register
+                0x00000128                mcp2515_read_register
+                0x00000146                mcp2515_bit_modify
+                0x00000184                mcp2515_read_status
+                0x00000194                can_init
+ .text          0x00000276       0x1c C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+                0x00000276                can_check_message
+                0x0000027e                can_check_free_buffer
+ .text          0x00000292       0xbc C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+                0x00000292                can_get_message
+ .text          0x0000034e       0x76 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+                0x0000034e                can_static_filter
+ .text          0x000003c4       0x6c C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+                0x000003c4                mcp2515_read_id
+ .text          0x00000430       0x16 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+                0x00000430                mcp2515_spi_init
+                0x0000043a                spi_putc
+                0x00000446                . = ALIGN (0x2)
+ *(.text.*)
+ .text.ma_adc0  0x00000446       0x3e src/adc.o
+                0x00000446                ma_adc0
+ .text.ma_adc1  0x00000484       0x3e src/adc.o
+                0x00000484                ma_adc1
+ .text.ma_adc2  0x000004c2       0x3e src/adc.o
+                0x000004c2                ma_adc2
+ .text.ma_adc3  0x00000500       0x3e src/adc.o
+                0x00000500                ma_adc3
+ .text.ma_adc4  0x0000053e       0x3e src/adc.o
+                0x0000053e                ma_adc4
+ .text.ma_adc5  0x0000057c       0x3e src/adc.o
+                0x0000057c                ma_adc5
+ .text.adc_select_channel
+                0x000005ba       0x2e src/adc.o
+                0x000005ba                adc_select_channel
+ .text.adc_init
+                0x000005e8       0x3a src/adc.o
+                0x000005e8                adc_init
+ .text.__vector_21
+                0x00000622      0x18c src/adc.o
+                0x00000622                __vector_21
+ .text.__vector_14
+                0x000007ae        0x2 src/adc.o
+                0x000007ae                __vector_14
+ .text.calculate_check_sum
+                0x000007b0       0x36 src/bt.o
+                0x000007b0                calculate_check_sum
+ .text.bt_send_package
+                0x000007e6       0xfa src/bt.o
+                0x000007e6                bt_send_package
+ .text.can_app_extractor_mcc17_1_mppt
+                0x000008e0       0x10 src/can_app.o
+                0x000008e0                can_app_extractor_mcc17_1_mppt
+ .text.can_app_task
+                0x000008f0       0x7e src/can_app.o
+                0x000008f0                can_app_task
+ .text.machine_init
+                0x0000096e       0x1e src/machine.o
+                0x0000096e                machine_init
+ .text.machine_run
+                0x0000098c      0x11a src/machine.o
+                0x0000098c                machine_run
+ .text.__vector_7
+                0x00000aa6       0x1e src/machine.o
+                0x00000aa6                __vector_7
+ .text.wdt_init
+                0x00000ac4       0x16 src/main.o
+                0x00000ac4                wdt_init
+ .text.sleep_init
+                0x00000ada        0x8 src/main.o
+                0x00000ada                sleep_init
+ .text.main     0x00000ae2       0xbe src/main.o
+                0x00000ae2                main
+ .text.__vector_default
+                0x00000ba0        0xc src/main.o
+                0x00000ba0                __vector_default
+ .text.usart_send_string
+                0x00000bac       0x34 src/usart.o
+                0x00000bac                usart_send_string
+ .text.usart_send_buffer
+                0x00000be0       0x38 src/usart.o
+                0x00000be0                usart_send_buffer
+ .text.usart_init
+                0x00000c18       0x34 src/usart.o
+                0x00000c18                usart_init
+ .text.libgcc   0x00000c4c       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+                0x00000c4c                __adddi3_s8
+                0x00000c64                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000c64        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000c64                _exit
+                0x00000c64                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000c64        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000c68                _etext = .
+
+.data           0x00800100       0x7c load address 0x00000c68
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800100       0x24 src/machine.o
+ .rodata.str1.1
+                0x00800124       0x58 src/main.o
+                                 0x5e (size before relaxing)
+ *(.gnu.linkonce.r*)
+                0x0080017c                . = ALIGN (0x2)
+                0x0080017c                _edata = .
+                0x0080017c                PROVIDE (__data_end, .)
+
+.bss            0x0080017c      0x11e
+                0x0080017c                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.ADC_CHANNEL
+                0x0080017c        0x1 src/adc.o
+ *(COMMON)
+ COMMON         0x0080017d       0xd2 src/adc.o
+                0x0080017d                cbuf_adc5
+                0x0080019f                cbuf_adc1
+                0x008001c1                avg_adc1
+                0x008001c2                cbuf_adc2
+                0x008001e4                avg_adc4
+                0x008001e5                cbuf_adc4
+                0x00800207                avg_adc2
+                0x00800208                avg_adc5
+                0x00800209                cbuf_adc3
+                0x0080022b                cbuf_adc0
+                0x0080024d                avg_adc0
+                0x0080024e                avg_adc3
+ COMMON         0x0080024f       0x4b src/bt.o
+                0x0080024f                control
+                0x00800264                mpackage
+                0x00800288                timestamp
+                0x00800290                can_app_checks_without_mic17_msg
+                0x00800292                led_clk_div
+                0x00800293                system_flags
+                0x00800294                state_machine
+                0x00800295                can_app_send_state_clk_div
+                0x00800296                error_flags
+                0x00800297                machine_clk
+                0x00800298                total_errors
+                0x00800299                can_app_send_motor_clk_div
+                0x0080029a                PROVIDE (__bss_end, .)
+                0x00000c68                __data_load_start = LOADADDR (.data)
+                0x00000ce4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080029a        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x0080029a                _end = .
+                [!provide]                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x60
+ *(.comment)
+ .comment       0x00000000       0x30 src/adc.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000030       0x31 src/bt.o
+ .comment       0x00000030       0x31 src/can_app.o
+ .comment       0x00000030       0x31 src/machine.o
+ .comment       0x00000030       0x31 src/main.o
+ .comment       0x00000030       0x31 src/usart.o
+ .comment       0x00000030       0x30 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+                                 0x31 (size before relaxing)
+ .comment       0x00000060       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .comment       0x00000060       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .comment       0x00000060       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .comment       0x00000060       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .comment       0x00000060       0x31 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x2c8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x70 src/adc.o
+ .debug_aranges
+                0x00000070       0x28 src/bt.o
+ .debug_aranges
+                0x00000098       0x48 src/can_app.o
+ .debug_aranges
+                0x000000e0       0xa0 src/machine.o
+ .debug_aranges
+                0x00000180       0x40 src/main.o
+ .debug_aranges
+                0x000001c0       0x48 src/usart.o
+ .debug_aranges
+                0x00000208       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_aranges
+                0x00000228       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_aranges
+                0x00000248       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_aranges
+                0x00000268       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_aranges
+                0x00000288       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_aranges
+                0x000002a8       0x20 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x4518
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_info    0x000005f4      0x56b src/adc.o
+ .debug_info    0x00000b5f      0x7ec src/bt.o
+ .debug_info    0x0000134b      0xaf8 src/can_app.o
+ .debug_info    0x00001e43      0xc16 src/machine.o
+ .debug_info    0x00002a59      0xb38 src/main.o
+ .debug_info    0x00003591      0x286 src/usart.o
+ .debug_info    0x00003817      0x513 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_info    0x00003d2a       0xea C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_info    0x00003e14      0x28b C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_info    0x0000409f      0x20f C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_info    0x000042ae      0x1b3 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_info    0x00004461       0xb7 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_abbrev   0x00000000     0x17f7
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_abbrev  0x000005a2      0x177 src/adc.o
+ .debug_abbrev  0x00000719      0x1b8 src/bt.o
+ .debug_abbrev  0x000008d1      0x26c src/can_app.o
+ .debug_abbrev  0x00000b3d      0x219 src/machine.o
+ .debug_abbrev  0x00000d56      0x28e src/main.o
+ .debug_abbrev  0x00000fe4      0x1a8 src/usart.o
+ .debug_abbrev  0x0000118c      0x1d4 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_abbrev  0x00001360       0xad C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_abbrev  0x0000140d      0x142 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_abbrev  0x0000154f      0x10d C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_abbrev  0x0000165c      0x123 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_abbrev  0x0000177f       0x78 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_line     0x00000000     0x169d
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_line    0x00000133      0x37e src/adc.o
+ .debug_line    0x000004b1      0x16a src/bt.o
+ .debug_line    0x0000061b      0x234 src/can_app.o
+ .debug_line    0x0000084f      0x396 src/machine.o
+ .debug_line    0x00000be5      0x2e6 src/main.o
+ .debug_line    0x00000ecb      0x1eb src/usart.o
+ .debug_line    0x000010b6      0x18b C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_line    0x00001241       0xcb C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_line    0x0000130c      0x108 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_line    0x00001414       0xf3 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_line    0x00001507       0xe5 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_line    0x000015ec       0xb1 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_frame    0x00000000      0x668
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x11c src/adc.o
+ .debug_frame   0x0000011c       0x58 src/bt.o
+ .debug_frame   0x00000174       0xa4 src/can_app.o
+ .debug_frame   0x00000218      0x14c src/machine.o
+ .debug_frame   0x00000364       0x70 src/main.o
+ .debug_frame   0x000003d4       0xa8 src/usart.o
+ .debug_frame   0x0000047c       0xc0 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_frame   0x0000053c       0x34 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_frame   0x00000570       0x50 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_frame   0x000005c0       0x3c C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_frame   0x000005fc       0x38 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_frame   0x00000634       0x34 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_str      0x00000000      0xd7b
+ *(.debug_str)
+ .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .debug_str     0x00000208      0x293 src/adc.o
+                                0x2c7 (size before relaxing)
+ .debug_str     0x0000049b      0x25f src/bt.o
+                                0x52e (size before relaxing)
+ .debug_str     0x000006fa      0x125 src/can_app.o
+                                0x5f3 (size before relaxing)
+ .debug_str     0x0000081f      0x1c3 src/machine.o
+                                0x6ea (size before relaxing)
+ .debug_str     0x000009e2      0x15e src/main.o
+                                0x65a (size before relaxing)
+ .debug_str     0x00000b40       0x2e src/usart.o
+                                0x1fb (size before relaxing)
+ .debug_str     0x00000b6e      0x178 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+                                0x2ec (size before relaxing)
+ .debug_str     0x00000ce6       0x27 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+                                0x197 (size before relaxing)
+ .debug_str     0x00000d0d       0x2b C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+                                0x1d0 (size before relaxing)
+ .debug_str     0x00000d38       0x18 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+                                0x1d2 (size before relaxing)
+ .debug_str     0x00000d50       0x25 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+                                0x18f (size before relaxing)
+ .debug_str     0x00000d75        0x6 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+                                0x162 (size before relaxing)
+
+.debug_loc      0x00000000     0x10f5
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x368 src/adc.o
+ .debug_loc     0x00000368      0x12c src/bt.o
+ .debug_loc     0x00000494      0x1cf src/can_app.o
+ .debug_loc     0x00000663       0x9a src/machine.o
+ .debug_loc     0x000006fd       0x8b src/main.o
+ .debug_loc     0x00000788      0x235 src/usart.o
+ .debug_loc     0x000009bd      0x3e3 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515.o)
+ .debug_loc     0x00000da0       0x13 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_buffer.o)
+ .debug_loc     0x00000db3      0x14a C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_get_message.o)
+ .debug_loc     0x00000efd      0x101 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_static_filter.o)
+ .debug_loc     0x00000ffe       0xd8 C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(mcp2515_read_id.o)
+ .debug_loc     0x000010d6       0x1f C:\Users\cliente\Documents\Contabilidade_do_trafico\MAD17\MAD17\lib\libcan.a(spi.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x1f0
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x60 src/adc.o
+ .debug_ranges  0x00000060       0x18 src/bt.o
+ .debug_ranges  0x00000078       0x38 src/can_app.o
+ .debug_ranges  0x000000b0       0x90 src/machine.o
+ .debug_ranges  0x00000140       0x30 src/main.o
+ .debug_ranges  0x00000170       0x80 src/usart.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(MAD17.elf elf32-avr)
+LOAD linker stubs
