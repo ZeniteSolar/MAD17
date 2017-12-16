@@ -1,8 +1,18 @@
 #ignore everything
-*~
+*
 #but not these files
-#Descrição dos arquivos´pastas a serem ignorados
+!.gitignore
+!README.md
+!LICENSE
 
+!MCC17/
+!MCC17/lib/
+!MCC17/lib/*.h
+!MCC17/lib/*.a
 
-*.atsln
-*.atsuo
+!MCC17/
+!MCC17/src/
+!MCC17/src/*.c
+!MCC17/src/*.h
+
+!*.pdf
