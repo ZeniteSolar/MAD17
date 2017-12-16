@@ -3,31 +3,31 @@ MDA17.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000c22  2**0
+  0 .data         00000000  00800100  00800100  00000c2a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000bae  00000000  00000000  00000074  2**1
+  1 .text         00000bb6  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          0000011e  00800100  00800100  00000c22  2**0
+  2 .bss          0000011e  00800100  00800100  00000c2a  2**0
                   ALLOC
-  3 .comment      00000060  00000000  00000000  00000c22  2**0
+  3 .comment      00000060  00000000  00000000  00000c2a  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000c84  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000c8c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000002c8  00000000  00000000  00000cc4  2**0
+  5 .debug_aranges 000002c8  00000000  00000000  00000ccc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00004228  00000000  00000000  00000f8c  2**0
+  6 .debug_info   00004228  00000000  00000000  00000f94  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000017c1  00000000  00000000  000051b4  2**0
+  7 .debug_abbrev 000017c1  00000000  00000000  000051bc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000015cd  00000000  00000000  00006975  2**0
+  8 .debug_line   000015cd  00000000  00000000  0000697d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000658  00000000  00000000  00007f44  2**2
+  9 .debug_frame  00000658  00000000  00000000  00007f4c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000d4e  00000000  00000000  0000859c  2**0
+ 10 .debug_str    00000d4e  00000000  00000000  000085a4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001064  00000000  00000000  000092ea  2**0
+ 11 .debug_loc    00001064  00000000  00000000  000092f2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000001f0  00000000  00000000  0000a34e  2**0
+ 12 .debug_ranges 000001f0  00000000  00000000  0000a356  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -40,7 +40,7 @@ Disassembly of section .text:
   10:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
   14:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
   18:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
-  1c:	0c 94 44 05 	jmp	0xa88	; 0xa88 <__vector_7>
+  1c:	0c 94 48 05 	jmp	0xa90	; 0xa90 <__vector_7>
   20:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
   24:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
   28:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__bad_interrupt>
@@ -111,11 +111,11 @@ void wdt_first(void)
   ce:	ae 31       	cpi	r26, 0x1E	; 30
   d0:	b2 07       	cpc	r27, r18
   d2:	e1 f7       	brne	.-8      	; 0xcc <.do_clear_bss_loop>
-  d4:	0e 94 62 05 	call	0xac4	; 0xac4 <main>
-  d8:	0c 94 d5 05 	jmp	0xbaa	; 0xbaa <_exit>
+  d4:	0e 94 66 05 	call	0xacc	; 0xacc <main>
+  d8:	0c 94 d9 05 	jmp	0xbb2	; 0xbb2 <_exit>
 
 000000dc <__bad_interrupt>:
-  dc:	0c 94 8d 05 	jmp	0xb1a	; 0xb1a <__vector_default>
+  dc:	0c 94 91 05 	jmp	0xb22	; 0xb22 <__vector_default>
 
 000000e0 <mcp2515_write_register>:
   e0:	1f 93       	push	r17
@@ -1251,7 +1251,7 @@ void bt_send_package(void)
  81c:	8f 2f       	mov	r24, r31
  81e:	9e 2f       	mov	r25, r30
  820:	a1 e0       	ldi	r26, 0x01	; 1
- 822:	0e 94 c9 05 	call	0xb92	; 0xb92 <__adddi3_s8>
+ 822:	0e 94 cd 05 	call	0xb9a	; 0xb9a <__adddi3_s8>
  826:	20 93 0c 02 	sts	0x020C, r18	; 0x80020c <timestamp>
  82a:	30 93 0d 02 	sts	0x020D, r19	; 0x80020d <timestamp+0x1>
  82e:	40 93 0e 02 	sts	0x020E, r20	; 0x80020e <timestamp+0x2>
@@ -1305,717 +1305,721 @@ void bt_send_package(void)
  88c:	90 e0       	ldi	r25, 0x00	; 0
  88e:	9b 8f       	std	Y+27, r25	; 0x1b
  890:	8a 8f       	std	Y+26, r24	; 0x1a
-  mpackage.data.MotorRPM = 0;
- 892:	1d 8e       	std	Y+29, r1	; 0x1d
- 894:	1c 8e       	std	Y+28, r1	; 0x1c
-  mpackage.data.WaterSpeed = 0;
- 896:	1f 8e       	std	Y+31, r1	; 0x1f
- 898:	1e 8e       	std	Y+30, r1	; 0x1e
+  mpackage.data.MotorRPM = 1;
+ 892:	81 e0       	ldi	r24, 0x01	; 1
+ 894:	90 e0       	ldi	r25, 0x00	; 0
+ 896:	9d 8f       	std	Y+29, r25	; 0x1d
+ 898:	8c 8f       	std	Y+28, r24	; 0x1c
+  mpackage.data.WaterSpeed = 12;
+ 89a:	8c e0       	ldi	r24, 0x0C	; 12
+ 89c:	90 e0       	ldi	r25, 0x00	; 0
+ 89e:	9f 8f       	std	Y+31, r25	; 0x1f
+ 8a0:	8e 8f       	std	Y+30, r24	; 0x1e
   mpackage.data.Torque1 = 0;
- 89a:	19 a2       	std	Y+33, r1	; 0x21
- 89c:	18 a2       	std	Y+32, r1	; 0x20
+ 8a2:	19 a2       	std	Y+33, r1	; 0x21
+ 8a4:	18 a2       	std	Y+32, r1	; 0x20
   mpackage.data.Torque2 = 0;
- 89e:	1b a2       	std	Y+35, r1	; 0x23
- 8a0:	1a a2       	std	Y+34, r1	; 0x22
+ 8a6:	1b a2       	std	Y+35, r1	; 0x23
+ 8a8:	1a a2       	std	Y+34, r1	; 0x22
   mpackage.sum = calculate_check_sum( (uint8_t*) & (mpackage.data), sizeof(mpackage.data));
- 8a2:	64 e1       	ldi	r22, 0x14	; 20
- 8a4:	88 ef       	ldi	r24, 0xF8	; 248
- 8a6:	91 e0       	ldi	r25, 0x01	; 1
- 8a8:	0e 94 cd 03 	call	0x79a	; 0x79a <calculate_check_sum>
- 8ac:	90 e0       	ldi	r25, 0x00	; 0
- 8ae:	9f 87       	std	Y+15, r25	; 0x0f
- 8b0:	8e 87       	std	Y+14, r24	; 0x0e
+ 8aa:	64 e1       	ldi	r22, 0x14	; 20
+ 8ac:	88 ef       	ldi	r24, 0xF8	; 248
+ 8ae:	91 e0       	ldi	r25, 0x01	; 1
+ 8b0:	0e 94 cd 03 	call	0x79a	; 0x79a <calculate_check_sum>
+ 8b4:	90 e0       	ldi	r25, 0x00	; 0
+ 8b6:	9f 87       	std	Y+15, r25	; 0x0f
+ 8b8:	8e 87       	std	Y+14, r24	; 0x0e
 
   usart_send_buffer((uint8_t*) &mpackage, sizeof(mpackage));
- 8b2:	64 e2       	ldi	r22, 0x24	; 36
- 8b4:	ce 01       	movw	r24, r28
- 8b6:	0e 94 93 05 	call	0xb26	; 0xb26 <usart_send_buffer>
+ 8ba:	64 e2       	ldi	r22, 0x24	; 36
+ 8bc:	ce 01       	movw	r24, r28
+ 8be:	0e 94 97 05 	call	0xb2e	; 0xb2e <usart_send_buffer>
     Serial.print("\t");
     }
     Serial.println();
   */ 
  
 }
- 8ba:	df 91       	pop	r29
- 8bc:	cf 91       	pop	r28
- 8be:	1f 91       	pop	r17
- 8c0:	0f 91       	pop	r16
- 8c2:	ff 90       	pop	r15
- 8c4:	ef 90       	pop	r14
- 8c6:	df 90       	pop	r13
- 8c8:	08 95       	ret
+ 8c2:	df 91       	pop	r29
+ 8c4:	cf 91       	pop	r28
+ 8c6:	1f 91       	pop	r17
+ 8c8:	0f 91       	pop	r16
+ 8ca:	ff 90       	pop	r15
+ 8cc:	ef 90       	pop	r14
+ 8ce:	df 90       	pop	r13
+ 8d0:	08 95       	ret
 
-000008ca <can_app_extractor_mcc17_1_mppt>:
+000008d2 <can_app_extractor_mcc17_1_mppt>:
         control.I = msg->data[CAN_MSG_MAM17_MOTOR_LIM_BYTE];
     } 
 }
 
 void can_app_extractor_mcc17_1_mppt(can_t *msg){
 	if (msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MCC17_1)	{
- 8ca:	fc 01       	movw	r30, r24
- 8cc:	24 81       	ldd	r18, Z+4	; 0x04
- 8ce:	2d 3d       	cpi	r18, 0xDD	; 221
- 8d0:	19 f4       	brne	.+6      	; 0x8d8 <can_app_extractor_mcc17_1_mppt+0xe>
+ 8d2:	fc 01       	movw	r30, r24
+ 8d4:	24 81       	ldd	r18, Z+4	; 0x04
+ 8d6:	2d 3d       	cpi	r18, 0xDD	; 221
+ 8d8:	19 f4       	brne	.+6      	; 0x8e0 <can_app_extractor_mcc17_1_mppt+0xe>
 		control.MPPT_1_D = msg->data[CAN_MSG_MCC17_MPPT_IPANEL_BYTE];
- 8d2:	86 81       	ldd	r24, Z+6	; 0x06
- 8d4:	80 93 d3 01 	sts	0x01D3, r24	; 0x8001d3 <control>
- 8d8:	08 95       	ret
+ 8da:	86 81       	ldd	r24, Z+6	; 0x06
+ 8dc:	80 93 d3 01 	sts	0x01D3, r24	; 0x8001d3 <control>
+ 8e0:	08 95       	ret
 
-000008da <can_app_task>:
+000008e2 <can_app_task>:
 
 /**
 * @brief Manages the canbus application protocol
 */
 inline void can_app_task(void)
 {
- 8da:	cf 93       	push	r28
- 8dc:	df 93       	push	r29
- 8de:	cd b7       	in	r28, 0x3d	; 61
- 8e0:	de b7       	in	r29, 0x3e	; 62
- 8e2:	2c 97       	sbiw	r28, 0x0c	; 12
- 8e4:	0f b6       	in	r0, 0x3f	; 63
- 8e6:	f8 94       	cli
- 8e8:	de bf       	out	0x3e, r29	; 62
- 8ea:	0f be       	out	0x3f, r0	; 63
- 8ec:	cd bf       	out	0x3d, r28	; 61
+ 8e2:	cf 93       	push	r28
+ 8e4:	df 93       	push	r29
+ 8e6:	cd b7       	in	r28, 0x3d	; 61
+ 8e8:	de b7       	in	r29, 0x3e	; 62
+ 8ea:	2c 97       	sbiw	r28, 0x0c	; 12
+ 8ec:	0f b6       	in	r0, 0x3f	; 63
+ 8ee:	f8 94       	cli
+ 8f0:	de bf       	out	0x3e, r29	; 62
+ 8f2:	0f be       	out	0x3f, r0	; 63
+ 8f4:	cd bf       	out	0x3d, r28	; 61
         can_app_checks_without_mic17_msg = 0;
         error_flags.no_canbus = 1;
         set_state_error();
     } */
     
     if(can_check_message()){
- 8ee:	0e 94 30 01 	call	0x260	; 0x260 <can_check_message>
- 8f2:	88 23       	and	r24, r24
- 8f4:	a1 f0       	breq	.+40     	; 0x91e <__stack+0x1f>
+ 8f6:	0e 94 30 01 	call	0x260	; 0x260 <can_check_message>
+ 8fa:	88 23       	and	r24, r24
+ 8fc:	a1 f0       	breq	.+40     	; 0x926 <__stack+0x27>
         can_t msg;
         if(can_get_message(&msg)){
- 8f6:	ce 01       	movw	r24, r28
- 8f8:	01 96       	adiw	r24, 0x01	; 1
- 8fa:	0e 94 3e 01 	call	0x27c	; 0x27c <can_get_message>
- 8fe:	88 23       	and	r24, r24
- 900:	71 f0       	breq	.+28     	; 0x91e <__stack+0x1f>
+ 8fe:	ce 01       	movw	r24, r28
+ 900:	01 96       	adiw	r24, 0x01	; 1
+ 902:	0e 94 3e 01 	call	0x27c	; 0x27c <can_get_message>
+ 906:	88 23       	and	r24, r24
+ 908:	71 f0       	breq	.+28     	; 0x926 <__stack+0x27>
  * @brief redirects a specific message extractor to a given message
  * @param *msg pointer to the message to be extracted
  */
 inline void can_app_msg_extractors_switch(can_t *msg)
 {
     if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MAM17){
- 902:	8d 81       	ldd	r24, Y+5	; 0x05
- 904:	8e 3b       	cpi	r24, 0xBE	; 190
- 906:	29 f4       	brne	.+10     	; 0x912 <__stack+0x13>
+ 90a:	8d 81       	ldd	r24, Y+5	; 0x05
+ 90c:	8e 3b       	cpi	r24, 0xBE	; 190
+ 90e:	29 f4       	brne	.+10     	; 0x91a <__stack+0x1b>
         switch(msg->id){
- 908:	29 81       	ldd	r18, Y+1	; 0x01
- 90a:	3a 81       	ldd	r19, Y+2	; 0x02
- 90c:	21 31       	cpi	r18, 0x11	; 17
- 90e:	31 05       	cpc	r19, r1
- 910:	31 f0       	breq	.+12     	; 0x91e <__stack+0x1f>
+ 910:	29 81       	ldd	r18, Y+1	; 0x01
+ 912:	3a 81       	ldd	r19, Y+2	; 0x02
+ 914:	21 31       	cpi	r18, 0x11	; 17
+ 916:	31 05       	cpc	r19, r1
+ 918:	31 f0       	breq	.+12     	; 0x926 <__stack+0x27>
     }
 	if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MCS17){
 		
 	}
 	
 	if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MCC17_1){
- 912:	8d 3d       	cpi	r24, 0xDD	; 221
- 914:	21 f4       	brne	.+8      	; 0x91e <__stack+0x1f>
+ 91a:	8d 3d       	cpi	r24, 0xDD	; 221
+ 91c:	21 f4       	brne	.+8      	; 0x926 <__stack+0x27>
 		can_app_extractor_mcc17_1_mppt(msg);
- 916:	ce 01       	movw	r24, r28
- 918:	01 96       	adiw	r24, 0x01	; 1
- 91a:	0e 94 65 04 	call	0x8ca	; 0x8ca <can_app_extractor_mcc17_1_mppt>
+ 91e:	ce 01       	movw	r24, r28
+ 920:	01 96       	adiw	r24, 0x01	; 1
+ 922:	0e 94 69 04 	call	0x8d2	; 0x8d2 <can_app_extractor_mcc17_1_mppt>
 */
 inline void can_app_task(void)
 {
     check_can();
 
     if(can_app_send_state_clk_div++ >= CAN_APP_SEND_STATE_CLK_DIV){
- 91e:	80 91 19 02 	lds	r24, 0x0219	; 0x800219 <can_app_send_state_clk_div>
- 922:	84 36       	cpi	r24, 0x64	; 100
- 924:	20 f4       	brcc	.+8      	; 0x92e <__stack+0x2f>
- 926:	8f 5f       	subi	r24, 0xFF	; 255
- 928:	80 93 19 02 	sts	0x0219, r24	; 0x800219 <can_app_send_state_clk_div>
- 92c:	02 c0       	rjmp	.+4      	; 0x932 <__stack+0x33>
+ 926:	80 91 19 02 	lds	r24, 0x0219	; 0x800219 <can_app_send_state_clk_div>
+ 92a:	84 36       	cpi	r24, 0x64	; 100
+ 92c:	20 f4       	brcc	.+8      	; 0x936 <__stack+0x37>
+ 92e:	8f 5f       	subi	r24, 0xFF	; 255
+ 930:	80 93 19 02 	sts	0x0219, r24	; 0x800219 <can_app_send_state_clk_div>
+ 934:	02 c0       	rjmp	.+4      	; 0x93a <__stack+0x3b>
         //VERBOSE_MSG_CAN_APP(usart_send_string("state msg was sent.\n"));
         
         can_app_send_state_clk_div = 0;
- 92e:	10 92 19 02 	sts	0x0219, r1	; 0x800219 <can_app_send_state_clk_div>
+ 936:	10 92 19 02 	sts	0x0219, r1	; 0x800219 <can_app_send_state_clk_div>
     }
 
     if(can_app_send_motor_clk_div++ >= CAN_APP_SEND_MOTOR_CLK_DIV){
- 932:	80 91 1d 02 	lds	r24, 0x021D	; 0x80021d <can_app_send_motor_clk_div>
- 936:	82 33       	cpi	r24, 0x32	; 50
- 938:	20 f4       	brcc	.+8      	; 0x942 <__stack+0x43>
- 93a:	8f 5f       	subi	r24, 0xFF	; 255
- 93c:	80 93 1d 02 	sts	0x021D, r24	; 0x80021d <can_app_send_motor_clk_div>
- 940:	02 c0       	rjmp	.+4      	; 0x946 <__stack+0x47>
+ 93a:	80 91 1d 02 	lds	r24, 0x021D	; 0x80021d <can_app_send_motor_clk_div>
+ 93e:	82 33       	cpi	r24, 0x32	; 50
+ 940:	20 f4       	brcc	.+8      	; 0x94a <__stack+0x4b>
+ 942:	8f 5f       	subi	r24, 0xFF	; 255
+ 944:	80 93 1d 02 	sts	0x021D, r24	; 0x80021d <can_app_send_motor_clk_div>
+ 948:	02 c0       	rjmp	.+4      	; 0x94e <__stack+0x4f>
         //VERBOSE_MSG_CAN_APP(usart_send_string("motor msg was sent.\n"));
         //can_app_send_motor();
         can_app_send_motor_clk_div = 0;
- 942:	10 92 1d 02 	sts	0x021D, r1	; 0x80021d <can_app_send_motor_clk_div>
+ 94a:	10 92 1d 02 	sts	0x021D, r1	; 0x80021d <can_app_send_motor_clk_div>
     }
 
 }
- 946:	2c 96       	adiw	r28, 0x0c	; 12
- 948:	0f b6       	in	r0, 0x3f	; 63
- 94a:	f8 94       	cli
- 94c:	de bf       	out	0x3e, r29	; 62
- 94e:	0f be       	out	0x3f, r0	; 63
- 950:	cd bf       	out	0x3d, r28	; 61
- 952:	df 91       	pop	r29
- 954:	cf 91       	pop	r28
- 956:	08 95       	ret
+ 94e:	2c 96       	adiw	r28, 0x0c	; 12
+ 950:	0f b6       	in	r0, 0x3f	; 63
+ 952:	f8 94       	cli
+ 954:	de bf       	out	0x3e, r29	; 62
+ 956:	0f be       	out	0x3f, r0	; 63
+ 958:	cd bf       	out	0x3d, r28	; 61
+ 95a:	df 91       	pop	r29
+ 95c:	cf 91       	pop	r28
+ 95e:	08 95       	ret
 
-00000958 <machine_init>:
+00000960 <machine_init>:
 /**
 * @brief set initializing state
 */ 
 inline void set_state_initializing(void)
 {
     state_machine = STATE_INITIALIZING;
- 958:	82 e0       	ldi	r24, 0x02	; 2
- 95a:	80 93 b0 00 	sts	0x00B0, r24	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7e00b0>
- 95e:	87 e0       	ldi	r24, 0x07	; 7
- 960:	80 93 b1 00 	sts	0x00B1, r24	; 0x8000b1 <__TEXT_REGION_LENGTH__+0x7e00b1>
- 964:	80 e5       	ldi	r24, 0x50	; 80
- 966:	80 93 b3 00 	sts	0x00B3, r24	; 0x8000b3 <__TEXT_REGION_LENGTH__+0x7e00b3>
- 96a:	e0 e7       	ldi	r30, 0x70	; 112
- 96c:	f0 e0       	ldi	r31, 0x00	; 0
- 96e:	80 81       	ld	r24, Z
- 970:	82 60       	ori	r24, 0x02	; 2
- 972:	80 83       	st	Z, r24
- 974:	08 95       	ret
+ 960:	82 e0       	ldi	r24, 0x02	; 2
+ 962:	80 93 b0 00 	sts	0x00B0, r24	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7e00b0>
+ 966:	87 e0       	ldi	r24, 0x07	; 7
+ 968:	80 93 b1 00 	sts	0x00B1, r24	; 0x8000b1 <__TEXT_REGION_LENGTH__+0x7e00b1>
+ 96c:	80 e5       	ldi	r24, 0x50	; 80
+ 96e:	80 93 b3 00 	sts	0x00B3, r24	; 0x8000b3 <__TEXT_REGION_LENGTH__+0x7e00b3>
+ 972:	e0 e7       	ldi	r30, 0x70	; 112
+ 974:	f0 e0       	ldi	r31, 0x00	; 0
+ 976:	80 81       	ld	r24, Z
+ 978:	82 60       	ori	r24, 0x02	; 2
+ 97a:	80 83       	st	Z, r24
+ 97c:	08 95       	ret
 
-00000976 <machine_run>:
+0000097e <machine_run>:
 
 /**
  * @brief this is the machine state itself.
  */
 inline void machine_run(void)
 {
- 976:	cf 93       	push	r28
- 978:	df 93       	push	r29
+ 97e:	cf 93       	push	r28
+ 980:	df 93       	push	r29
 	#ifdef CAN_ON
     can_app_task();
- 97a:	0e 94 6d 04 	call	0x8da	; 0x8da <can_app_task>
+ 982:	0e 94 71 04 	call	0x8e2	; 0x8e2 <can_app_task>
 	#endif
    // print_system_flags();
    // print_error_flags();
    // print_control();
 
     if(machine_clk){
- 97e:	80 91 1b 02 	lds	r24, 0x021B	; 0x80021b <machine_clk>
- 982:	88 23       	and	r24, r24
- 984:	09 f4       	brne	.+2      	; 0x988 <machine_run+0x12>
- 986:	7d c0       	rjmp	.+250    	; 0xa82 <machine_run+0x10c>
+ 986:	80 91 1b 02 	lds	r24, 0x021B	; 0x80021b <machine_clk>
+ 98a:	88 23       	and	r24, r24
+ 98c:	09 f4       	brne	.+2      	; 0x990 <machine_run+0x12>
+ 98e:	7d c0       	rjmp	.+250    	; 0xa8a <machine_run+0x10c>
         machine_clk = 0;
- 988:	10 92 1b 02 	sts	0x021B, r1	; 0x80021b <machine_clk>
+ 990:	10 92 1b 02 	sts	0x021B, r1	; 0x80021b <machine_clk>
         switch(state_machine){
- 98c:	80 91 18 02 	lds	r24, 0x0218	; 0x800218 <state_machine>
- 990:	81 30       	cpi	r24, 0x01	; 1
- 992:	21 f1       	breq	.+72     	; 0x9dc <machine_run+0x66>
- 994:	30 f0       	brcs	.+12     	; 0x9a2 <machine_run+0x2c>
- 996:	82 30       	cpi	r24, 0x02	; 2
- 998:	99 f1       	breq	.+102    	; 0xa00 <machine_run+0x8a>
- 99a:	83 30       	cpi	r24, 0x03	; 3
- 99c:	09 f4       	brne	.+2      	; 0x9a0 <machine_run+0x2a>
- 99e:	55 c0       	rjmp	.+170    	; 0xa4a <machine_run+0xd4>
- 9a0:	70 c0       	rjmp	.+224    	; 0xa82 <machine_run+0x10c>
+ 994:	80 91 18 02 	lds	r24, 0x0218	; 0x800218 <state_machine>
+ 998:	81 30       	cpi	r24, 0x01	; 1
+ 99a:	21 f1       	breq	.+72     	; 0x9e4 <machine_run+0x66>
+ 99c:	30 f0       	brcs	.+12     	; 0x9aa <machine_run+0x2c>
+ 99e:	82 30       	cpi	r24, 0x02	; 2
+ 9a0:	99 f1       	breq	.+102    	; 0xa08 <machine_run+0x8a>
+ 9a2:	83 30       	cpi	r24, 0x03	; 3
+ 9a4:	09 f4       	brne	.+2      	; 0x9a8 <machine_run+0x2a>
+ 9a6:	55 c0       	rjmp	.+170    	; 0xa52 <machine_run+0xd4>
+ 9a8:	70 c0       	rjmp	.+224    	; 0xa8a <machine_run+0x10c>
  *  - checks the temperature
  *
  */
 inline void task_initializing(void)
 {
     set_led();
- 9a2:	5e 9a       	sbi	0x0b, 6	; 11
+ 9aa:	5e 9a       	sbi	0x0b, 6	; 11
 	timestamp = 0;
- 9a4:	10 92 0c 02 	sts	0x020C, r1	; 0x80020c <timestamp>
- 9a8:	10 92 0d 02 	sts	0x020D, r1	; 0x80020d <timestamp+0x1>
- 9ac:	10 92 0e 02 	sts	0x020E, r1	; 0x80020e <timestamp+0x2>
- 9b0:	10 92 0f 02 	sts	0x020F, r1	; 0x80020f <timestamp+0x3>
- 9b4:	10 92 10 02 	sts	0x0210, r1	; 0x800210 <timestamp+0x4>
- 9b8:	10 92 11 02 	sts	0x0211, r1	; 0x800211 <timestamp+0x5>
- 9bc:	10 92 12 02 	sts	0x0212, r1	; 0x800212 <timestamp+0x6>
- 9c0:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <timestamp+0x7>
+ 9ac:	10 92 0c 02 	sts	0x020C, r1	; 0x80020c <timestamp>
+ 9b0:	10 92 0d 02 	sts	0x020D, r1	; 0x80020d <timestamp+0x1>
+ 9b4:	10 92 0e 02 	sts	0x020E, r1	; 0x80020e <timestamp+0x2>
+ 9b8:	10 92 0f 02 	sts	0x020F, r1	; 0x80020f <timestamp+0x3>
+ 9bc:	10 92 10 02 	sts	0x0210, r1	; 0x800210 <timestamp+0x4>
+ 9c0:	10 92 11 02 	sts	0x0211, r1	; 0x800211 <timestamp+0x5>
+ 9c4:	10 92 12 02 	sts	0x0212, r1	; 0x800212 <timestamp+0x6>
+ 9c8:	10 92 13 02 	sts	0x0213, r1	; 0x800213 <timestamp+0x7>
     //check_buffers();
     //check_idle_current();
     //check_idle_voltage();
     //check_idle_temperature();
        
     if(!error_flags.all){
- 9c4:	80 91 1a 02 	lds	r24, 0x021A	; 0x80021a <error_flags>
- 9c8:	81 11       	cpse	r24, r1
- 9ca:	04 c0       	rjmp	.+8      	; 0x9d4 <machine_run+0x5e>
+ 9cc:	80 91 1a 02 	lds	r24, 0x021A	; 0x80021a <error_flags>
+ 9d0:	81 11       	cpse	r24, r1
+ 9d2:	04 c0       	rjmp	.+8      	; 0x9dc <machine_run+0x5e>
 /**
 * @brief set idle state
 */ 
 inline void set_state_idle(void)
 {
     state_machine = STATE_IDLE;
- 9cc:	81 e0       	ldi	r24, 0x01	; 1
- 9ce:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
- 9d2:	57 c0       	rjmp	.+174    	; 0xa82 <machine_run+0x10c>
+ 9d4:	81 e0       	ldi	r24, 0x01	; 1
+ 9d6:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
+ 9da:	57 c0       	rjmp	.+174    	; 0xa8a <machine_run+0x10c>
 /**
  * @brief set error state
  */
 inline void set_state_error(void)
 {
     state_machine = STATE_ERROR;
- 9d4:	83 e0       	ldi	r24, 0x03	; 3
- 9d6:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
- 9da:	53 c0       	rjmp	.+166    	; 0xa82 <machine_run+0x10c>
+ 9dc:	83 e0       	ldi	r24, 0x03	; 3
+ 9de:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
+ 9e2:	53 c0       	rjmp	.+166    	; 0xa8a <machine_run+0x10c>
  *  - checks the potentiometer state
  *  then if its ok, enable the system to operate
  */
 inline void task_idle(void)
 {
     if(led_clk_div++ >= 50){
- 9dc:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
- 9e0:	91 e0       	ldi	r25, 0x01	; 1
- 9e2:	98 0f       	add	r25, r24
- 9e4:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
- 9e8:	82 33       	cpi	r24, 0x32	; 50
- 9ea:	30 f0       	brcs	.+12     	; 0x9f8 <machine_run+0x82>
+ 9e4:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
+ 9e8:	91 e0       	ldi	r25, 0x01	; 1
+ 9ea:	98 0f       	add	r25, r24
+ 9ec:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
+ 9f0:	82 33       	cpi	r24, 0x32	; 50
+ 9f2:	30 f0       	brcs	.+12     	; 0xa00 <machine_run+0x82>
         cpl_led();
- 9ec:	9b b1       	in	r25, 0x0b	; 11
- 9ee:	80 e4       	ldi	r24, 0x40	; 64
- 9f0:	89 27       	eor	r24, r25
- 9f2:	8b b9       	out	0x0b, r24	; 11
+ 9f4:	9b b1       	in	r25, 0x0b	; 11
+ 9f6:	80 e4       	ldi	r24, 0x40	; 64
+ 9f8:	89 27       	eor	r24, r25
+ 9fa:	8b b9       	out	0x0b, r24	; 11
         led_clk_div = 0;
- 9f4:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
+ 9fc:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
 * @brief set running state
 */ 
 inline void set_state_running(void)
 {
     
     state_machine = STATE_RUNNING;
- 9f8:	82 e0       	ldi	r24, 0x02	; 2
- 9fa:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
- 9fe:	41 c0       	rjmp	.+130    	; 0xa82 <machine_run+0x10c>
+ a00:	82 e0       	ldi	r24, 0x02	; 2
+ a02:	80 93 18 02 	sts	0x0218, r24	; 0x800218 <state_machine>
+ a06:	41 c0       	rjmp	.+130    	; 0xa8a <machine_run+0x10c>
 /**
  * @brief running task checks the system and apply the control action to pwm.
  */
 inline void task_running(void)
 {
     if(led_clk_div++ >= 10){
- a00:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
- a04:	91 e0       	ldi	r25, 0x01	; 1
- a06:	98 0f       	add	r25, r24
- a08:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
- a0c:	8a 30       	cpi	r24, 0x0A	; 10
- a0e:	30 f0       	brcs	.+12     	; 0xa1c <machine_run+0xa6>
+ a08:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
+ a0c:	91 e0       	ldi	r25, 0x01	; 1
+ a0e:	98 0f       	add	r25, r24
+ a10:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
+ a14:	8a 30       	cpi	r24, 0x0A	; 10
+ a16:	30 f0       	brcs	.+12     	; 0xa24 <machine_run+0xa6>
         cpl_led();
- a10:	9b b1       	in	r25, 0x0b	; 11
- a12:	80 e4       	ldi	r24, 0x40	; 64
- a14:	89 27       	eor	r24, r25
- a16:	8b b9       	out	0x0b, r24	; 11
+ a18:	9b b1       	in	r25, 0x0b	; 11
+ a1a:	80 e4       	ldi	r24, 0x40	; 64
+ a1c:	89 27       	eor	r24, r25
+ a1e:	8b b9       	out	0x0b, r24	; 11
         led_clk_div = 0;
- a18:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
+ a20:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
 /**
  * @brief checks if the current level is ok for running state
  */
 inline void check_running_OutCurrent(void)
 {
    control.OutCurrent = ma_adc5(); 
- a1c:	0e 94 b3 02 	call	0x566	; 0x566 <ma_adc5>
- a20:	c3 ed       	ldi	r28, 0xD3	; 211
- a22:	d1 e0       	ldi	r29, 0x01	; 1
- a24:	8c 8b       	std	Y+20, r24	; 0x14
+ a24:	0e 94 b3 02 	call	0x566	; 0x566 <ma_adc5>
+ a28:	c3 ed       	ldi	r28, 0xD3	; 211
+ a2a:	d1 e0       	ldi	r29, 0x01	; 1
+ a2c:	8c 8b       	std	Y+20, r24	; 0x14
 
 /**
  * @brief checks if the current level is ok for running state
  */
 inline void check_running_InCurrent(void){
 	control.InCurrent = ma_adc4();
- a26:	0e 94 94 02 	call	0x528	; 0x528 <ma_adc4>
- a2a:	8b 8b       	std	Y+19, r24	; 0x13
+ a2e:	0e 94 94 02 	call	0x528	; 0x528 <ma_adc4>
+ a32:	8b 8b       	std	Y+19, r24	; 0x13
 /**
  * @brief checks if the voltage level is ok for running state
  */
 inline void check_running_BatteryTemperature(void)
 {
 	control.BatteryTemperature = ma_adc3();
- a2c:	0e 94 75 02 	call	0x4ea	; 0x4ea <ma_adc3>
- a30:	8a 8b       	std	Y+18, r24	; 0x12
+ a34:	0e 94 75 02 	call	0x4ea	; 0x4ea <ma_adc3>
+ a38:	8a 8b       	std	Y+18, r24	; 0x12
 /**
  * @brief checks if the temperature level is ok for running state
  */
 inline void check_running_MotorVoltage(void)
 {
     control.MotorVoltage = ma_adc2();
- a32:	0e 94 56 02 	call	0x4ac	; 0x4ac <ma_adc2>
- a36:	89 8b       	std	Y+17, r24	; 0x11
+ a3a:	0e 94 56 02 	call	0x4ac	; 0x4ac <ma_adc2>
+ a3e:	89 8b       	std	Y+17, r24	; 0x11
 /**
  * @brief checks if the temperature level is ok for running state
  */
 inline void check_running_MotorTemperature(void)
 {
     control.MotorTemperature = ma_adc1();
- a38:	0e 94 37 02 	call	0x46e	; 0x46e <ma_adc1>
- a3c:	88 8b       	std	Y+16, r24	; 0x10
+ a40:	0e 94 37 02 	call	0x46e	; 0x46e <ma_adc1>
+ a44:	88 8b       	std	Y+16, r24	; 0x10
 /**
 * @brief checks if the temperature level is ok for running state
 */
 inline void check_running_BatteryVoltage(void)
 {
     control.BatteryVoltage = ma_adc0();
- a3e:	0e 94 18 02 	call	0x430	; 0x430 <ma_adc0>
- a42:	8f 87       	std	Y+15, r24	; 0x0f
+ a46:	0e 94 18 02 	call	0x430	; 0x430 <ma_adc0>
+ a4a:	8f 87       	std	Y+15, r24	; 0x0f
     check_running_MotorVoltage();
 	check_running_MotorTemperature();
 	check_running_BatteryVoltage();
 	
 	//!<Envia os dados para o bluetooth	
 	bt_send_package(); //!< Envia dados para o bluetooth
- a44:	0e 94 e8 03 	call	0x7d0	; 0x7d0 <bt_send_package>
- a48:	1c c0       	rjmp	.+56     	; 0xa82 <machine_run+0x10c>
+ a4c:	0e 94 e8 03 	call	0x7d0	; 0x7d0 <bt_send_package>
+ a50:	1c c0       	rjmp	.+56     	; 0xa8a <machine_run+0x10c>
 /**
  * @brief error task checks the system and tries to medicine it.
  */
 inline void task_error(void)
 {
     if(led_clk_div++ >= 5){
- a4a:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
- a4e:	91 e0       	ldi	r25, 0x01	; 1
- a50:	98 0f       	add	r25, r24
- a52:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
- a56:	85 30       	cpi	r24, 0x05	; 5
- a58:	30 f0       	brcs	.+12     	; 0xa66 <machine_run+0xf0>
+ a52:	80 91 16 02 	lds	r24, 0x0216	; 0x800216 <led_clk_div>
+ a56:	91 e0       	ldi	r25, 0x01	; 1
+ a58:	98 0f       	add	r25, r24
+ a5a:	90 93 16 02 	sts	0x0216, r25	; 0x800216 <led_clk_div>
+ a5e:	85 30       	cpi	r24, 0x05	; 5
+ a60:	30 f0       	brcs	.+12     	; 0xa6e <machine_run+0xf0>
         cpl_led();
- a5a:	9b b1       	in	r25, 0x0b	; 11
- a5c:	80 e4       	ldi	r24, 0x40	; 64
- a5e:	89 27       	eor	r24, r25
- a60:	8b b9       	out	0x0b, r24	; 11
+ a62:	9b b1       	in	r25, 0x0b	; 11
+ a64:	80 e4       	ldi	r24, 0x40	; 64
+ a66:	89 27       	eor	r24, r25
+ a68:	8b b9       	out	0x0b, r24	; 11
         led_clk_div = 0;
- a62:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
+ a6a:	10 92 16 02 	sts	0x0216, r1	; 0x800216 <led_clk_div>
     }
 
 
 
     total_errors++;         // incrementa a contagem de erros
- a66:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <total_errors>
- a6a:	8f 5f       	subi	r24, 0xFF	; 255
- a6c:	80 93 1c 02 	sts	0x021C, r24	; 0x80021c <total_errors>
+ a6e:	80 91 1c 02 	lds	r24, 0x021C	; 0x80021c <total_errors>
+ a72:	8f 5f       	subi	r24, 0xFF	; 255
+ a74:	80 93 1c 02 	sts	0x021C, r24	; 0x80021c <total_errors>
     VERBOSE_MSG_ERROR(usart_send_char('\n'));
     
     if(total_errors < 2){
         VERBOSE_MSG_ERROR(usart_send_string("I will reset the machine state.\n"));
     }*/
     if(total_errors >= 20){
- a70:	84 31       	cpi	r24, 0x14	; 20
- a72:	08 f0       	brcs	.+2      	; 0xa76 <machine_run+0x100>
- a74:	ff cf       	rjmp	.-2      	; 0xa74 <machine_run+0xfe>
+ a78:	84 31       	cpi	r24, 0x14	; 20
+ a7a:	08 f0       	brcs	.+2      	; 0xa7e <machine_run+0x100>
+ a7c:	ff cf       	rjmp	.-2      	; 0xa7c <machine_run+0xfe>
         //VERBOSE_MSG_ERROR(usart_send_string("The watchdog will reset the whole system.\n"));
         for(;;);    // waits the watchdog to reset.
     }
     
     cpl_led();
- a76:	9b b1       	in	r25, 0x0b	; 11
- a78:	80 e4       	ldi	r24, 0x40	; 64
- a7a:	89 27       	eor	r24, r25
- a7c:	8b b9       	out	0x0b, r24	; 11
+ a7e:	9b b1       	in	r25, 0x0b	; 11
+ a80:	80 e4       	ldi	r24, 0x40	; 64
+ a82:	89 27       	eor	r24, r25
+ a84:	8b b9       	out	0x0b, r24	; 11
 /**
 * @brief set initializing state
 */ 
 inline void set_state_initializing(void)
 {
     state_machine = STATE_INITIALIZING;
- a7e:	10 92 18 02 	sts	0x0218, r1	; 0x800218 <state_machine>
+ a86:	10 92 18 02 	sts	0x0218, r1	; 0x800218 <state_machine>
 
             default:
                 break;
         }
     }
 }
- a82:	df 91       	pop	r29
- a84:	cf 91       	pop	r28
- a86:	08 95       	ret
+ a8a:	df 91       	pop	r29
+ a8c:	cf 91       	pop	r28
+ a8e:	08 95       	ret
 
-00000a88 <__vector_7>:
+00000a90 <__vector_7>:
 
 /**
 * @brief ISR para ações de controle
 */
 ISR(TIMER2_COMPA_vect)
 {
- a88:	1f 92       	push	r1
- a8a:	0f 92       	push	r0
- a8c:	0f b6       	in	r0, 0x3f	; 63
- a8e:	0f 92       	push	r0
- a90:	11 24       	eor	r1, r1
- a92:	8f 93       	push	r24
+ a90:	1f 92       	push	r1
+ a92:	0f 92       	push	r0
+ a94:	0f b6       	in	r0, 0x3f	; 63
+ a96:	0f 92       	push	r0
+ a98:	11 24       	eor	r1, r1
+ a9a:	8f 93       	push	r24
     //VERBOSE_MSG_ERROR(if(machine_clk) usart_send_string("\nERROR: CLOCK CONFLICT!!!\n"));
 	machine_clk = 1;
- a94:	81 e0       	ldi	r24, 0x01	; 1
- a96:	80 93 1b 02 	sts	0x021B, r24	; 0x80021b <machine_clk>
+ a9c:	81 e0       	ldi	r24, 0x01	; 1
+ a9e:	80 93 1b 02 	sts	0x021B, r24	; 0x80021b <machine_clk>
 }
- a9a:	8f 91       	pop	r24
- a9c:	0f 90       	pop	r0
- a9e:	0f be       	out	0x3f, r0	; 63
- aa0:	0f 90       	pop	r0
- aa2:	1f 90       	pop	r1
- aa4:	18 95       	reti
+ aa2:	8f 91       	pop	r24
+ aa4:	0f 90       	pop	r0
+ aa6:	0f be       	out	0x3f, r0	; 63
+ aa8:	0f 90       	pop	r0
+ aaa:	1f 90       	pop	r1
+ aac:	18 95       	reti
 
-00000aa6 <wdt_init>:
+00000aae <wdt_init>:
 				: "r0"
 		);
 	}
 	else
 	{
 		__asm__ __volatile__ (
- aa6:	9f e0       	ldi	r25, 0x0F	; 15
- aa8:	88 e1       	ldi	r24, 0x18	; 24
- aaa:	0f b6       	in	r0, 0x3f	; 63
- aac:	f8 94       	cli
- aae:	a8 95       	wdr
- ab0:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__TEXT_REGION_LENGTH__+0x7e0060>
- ab4:	0f be       	out	0x3f, r0	; 63
- ab6:	90 93 60 00 	sts	0x0060, r25	; 0x800060 <__TEXT_REGION_LENGTH__+0x7e0060>
- aba:	08 95       	ret
+ aae:	9f e0       	ldi	r25, 0x0F	; 15
+ ab0:	88 e1       	ldi	r24, 0x18	; 24
+ ab2:	0f b6       	in	r0, 0x3f	; 63
+ ab4:	f8 94       	cli
+ ab6:	a8 95       	wdr
+ ab8:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__TEXT_REGION_LENGTH__+0x7e0060>
+ abc:	0f be       	out	0x3f, r0	; 63
+ abe:	90 93 60 00 	sts	0x0060, r25	; 0x800060 <__TEXT_REGION_LENGTH__+0x7e0060>
+ ac2:	08 95       	ret
 
-00000abc <sleep_init>:
+00000ac4 <sleep_init>:
 #include <avr/io.h>
 #include <avr/sleep.h>
 
 void sleep_init(void)
 {
 	set_sleep_mode(SLEEP_MODE_IDLE);
- abc:	83 b7       	in	r24, 0x33	; 51
- abe:	81 7f       	andi	r24, 0xF1	; 241
- ac0:	83 bf       	out	0x33, r24	; 51
- ac2:	08 95       	ret
+ ac4:	83 b7       	in	r24, 0x33	; 51
+ ac6:	81 7f       	andi	r24, 0xF1	; 241
+ ac8:	83 bf       	out	0x33, r24	; 51
+ aca:	08 95       	ret
 
-00000ac4 <main>:
+00000acc <main>:
 #include "main.h"
 
 int main(void)
 {
     #ifdef USART_ON
         usart_init(MYUBRR,1,1);                         // inicializa a usart
- ac4:	41 e0       	ldi	r20, 0x01	; 1
- ac6:	61 e0       	ldi	r22, 0x01	; 1
- ac8:	80 e1       	ldi	r24, 0x10	; 16
- aca:	90 e0       	ldi	r25, 0x00	; 0
- acc:	0e 94 af 05 	call	0xb5e	; 0xb5e <usart_init>
+ acc:	41 e0       	ldi	r20, 0x01	; 1
+ ace:	61 e0       	ldi	r22, 0x01	; 1
+ ad0:	80 e1       	ldi	r24, 0x10	; 16
+ ad2:	90 e0       	ldi	r25, 0x00	; 0
+ ad4:	0e 94 b3 05 	call	0xb66	; 0xb66 <usart_init>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- ad0:	2f ef       	ldi	r18, 0xFF	; 255
- ad2:	83 ed       	ldi	r24, 0xD3	; 211
- ad4:	90 e3       	ldi	r25, 0x30	; 48
- ad6:	21 50       	subi	r18, 0x01	; 1
- ad8:	80 40       	sbci	r24, 0x00	; 0
- ada:	90 40       	sbci	r25, 0x00	; 0
- adc:	e1 f7       	brne	.-8      	; 0xad6 <main+0x12>
- ade:	00 c0       	rjmp	.+0      	; 0xae0 <main+0x1c>
- ae0:	00 00       	nop
+ ad8:	2f ef       	ldi	r18, 0xFF	; 255
+ ada:	83 ed       	ldi	r24, 0xD3	; 211
+ adc:	90 e3       	ldi	r25, 0x30	; 48
+ ade:	21 50       	subi	r18, 0x01	; 1
+ ae0:	80 40       	sbci	r24, 0x00	; 0
+ ae2:	90 40       	sbci	r25, 0x00	; 0
+ ae4:	e1 f7       	brne	.-8      	; 0xade <main+0x12>
+ ae6:	00 c0       	rjmp	.+0      	; 0xae8 <main+0x1c>
+ ae8:	00 00       	nop
 
     _delay_ms(1000);
 
     #ifdef CAN_ON
         //VERBOSE_MSG_INIT(usart_send_string("CAN (125kbps)..."));
         can_init(BITRATE_500_KBPS);
- ae2:	86 e0       	ldi	r24, 0x06	; 6
- ae4:	0e 94 bf 00 	call	0x17e	; 0x17e <can_init>
+ aea:	86 e0       	ldi	r24, 0x06	; 6
+ aec:	0e 94 bf 00 	call	0x17e	; 0x17e <can_init>
         //VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
         //VERBOSE_MSG_INIT(usart_send_string("CAN filters..."));
         can_static_filter(can_filter);
- ae8:	88 e6       	ldi	r24, 0x68	; 104
- aea:	90 e0       	ldi	r25, 0x00	; 0
- aec:	0e 94 9c 01 	call	0x338	; 0x338 <can_static_filter>
+ af0:	88 e6       	ldi	r24, 0x68	; 104
+ af2:	90 e0       	ldi	r25, 0x00	; 0
+ af4:	0e 94 9c 01 	call	0x338	; 0x338 <can_static_filter>
         //VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
     #endif
 
     #ifdef ADC_ON
         //VERBOSE_MSG_INIT(usart_send_string("ADC..."));
         adc_init();
- af0:	0e 94 e9 02 	call	0x5d2	; 0x5d2 <adc_init>
+ af8:	0e 94 e9 02 	call	0x5d2	; 0x5d2 <adc_init>
     #endif
 
 
     #ifdef SLEEP_ON 
         //VERBOSE_MSG_INIT(usart_send_string("SLEEP..."));
         sleep_init();
- af4:	0e 94 5e 05 	call	0xabc	; 0xabc <sleep_init>
+ afc:	0e 94 62 05 	call	0xac4	; 0xac4 <sleep_init>
         //VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
     #endif
 
     #ifdef WATCHDOG_ON
         //VERBOSE_MSG_INIT(usart_send_string("WATCHDOG..."));
         wdt_init();
- af8:	0e 94 53 05 	call	0xaa6	; 0xaa6 <wdt_init>
+ b00:	0e 94 57 05 	call	0xaae	; 0xaae <wdt_init>
         //VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
     #endif
 
  	#ifdef MACHINE_ON
         //VERBOSE_MSG_INIT(usart_send_string("MACHINE..."));
 		machine_init();
- afc:	0e 94 ac 04 	call	0x958	; 0x958 <machine_init>
+ b04:	0e 94 b0 04 	call	0x960	; 0x960 <machine_init>
         //VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
 	#endif
 	
     set_bit(LED_DDR, LED);                      // LED como saída
- b00:	56 9a       	sbi	0x0a, 6	; 10
+ b08:	56 9a       	sbi	0x0a, 6	; 10
 	//set_bit(EICRA, ISC10);                      // rising edge for int1
 	//set_bit(EIMSK, INT0);                       // enables int1 interrupt
 	//set_bit(EIFR, INTF0);                       // clears int0 interrupt
 		
 	
     sei();
- b02:	78 94       	sei
+ b0a:	78 94       	sei
 	
 	for(;;){
 		#ifdef WATCHDOG_ON
             wdt_reset();
- b04:	a8 95       	wdr
+ b0c:	a8 95       	wdr
 		#endif
 
         #ifdef MACHINE_ON
             machine_run();
- b06:	0e 94 bb 04 	call	0x976	; 0x976 <machine_run>
+ b0e:	0e 94 bf 04 	call	0x97e	; 0x97e <machine_run>
         #endif
 
 		#ifdef SLEEP_ON
             sleep_mode();
- b0a:	83 b7       	in	r24, 0x33	; 51
- b0c:	81 60       	ori	r24, 0x01	; 1
- b0e:	83 bf       	out	0x33, r24	; 51
- b10:	88 95       	sleep
  b12:	83 b7       	in	r24, 0x33	; 51
- b14:	8e 7f       	andi	r24, 0xFE	; 254
+ b14:	81 60       	ori	r24, 0x01	; 1
  b16:	83 bf       	out	0x33, r24	; 51
- b18:	f5 cf       	rjmp	.-22     	; 0xb04 <main+0x40>
+ b18:	88 95       	sleep
+ b1a:	83 b7       	in	r24, 0x33	; 51
+ b1c:	8e 7f       	andi	r24, 0xFE	; 254
+ b1e:	83 bf       	out	0x33, r24	; 51
+ b20:	f5 cf       	rjmp	.-22     	; 0xb0c <main+0x40>
 
-00000b1a <__vector_default>:
+00000b22 <__vector_default>:
 
 /**
  * @brief se em debug, fica chaveando os pinos de debugs até o reset do watchdog
  */
 ISR(BADISR_vect)
 {
- b1a:	1f 92       	push	r1
- b1c:	0f 92       	push	r0
- b1e:	0f b6       	in	r0, 0x3f	; 63
- b20:	0f 92       	push	r0
- b22:	11 24       	eor	r1, r1
- b24:	ff cf       	rjmp	.-2      	; 0xb24 <__vector_default+0xa>
+ b22:	1f 92       	push	r1
+ b24:	0f 92       	push	r0
+ b26:	0f b6       	in	r0, 0x3f	; 63
+ b28:	0f 92       	push	r0
+ b2a:	11 24       	eor	r1, r1
+ b2c:	ff cf       	rjmp	.-2      	; 0xb2c <__vector_default+0xa>
 
-00000b26 <usart_send_buffer>:
+00000b2e <usart_send_buffer>:
 
 /**
  * @brief sends a buffer through serial. Max lenght is 255.
  */
 inline void usart_send_buffer(uint8_t *b, uint8_t lenght)
 {
- b26:	cf 93       	push	r28
- b28:	df 93       	push	r29
+ b2e:	cf 93       	push	r28
+ b30:	df 93       	push	r29
     uint8_t i = 0;
     while(i < lenght) usart_send_char(b[i++]);
- b2a:	66 23       	and	r22, r22
- b2c:	a9 f0       	breq	.+42     	; 0xb58 <usart_send_buffer+0x32>
- b2e:	dc 01       	movw	r26, r24
- b30:	61 50       	subi	r22, 0x01	; 1
- b32:	26 2f       	mov	r18, r22
- b34:	30 e0       	ldi	r19, 0x00	; 0
- b36:	2f 5f       	subi	r18, 0xFF	; 255
- b38:	3f 4f       	sbci	r19, 0xFF	; 255
- b3a:	ac 01       	movw	r20, r24
- b3c:	42 0f       	add	r20, r18
- b3e:	53 1f       	adc	r21, r19
+ b32:	66 23       	and	r22, r22
+ b34:	a9 f0       	breq	.+42     	; 0xb60 <usart_send_buffer+0x32>
+ b36:	dc 01       	movw	r26, r24
+ b38:	61 50       	subi	r22, 0x01	; 1
+ b3a:	26 2f       	mov	r18, r22
+ b3c:	30 e0       	ldi	r19, 0x00	; 0
+ b3e:	2f 5f       	subi	r18, 0xFF	; 255
+ b40:	3f 4f       	sbci	r19, 0xFF	; 255
+ b42:	ac 01       	movw	r20, r24
+ b44:	42 0f       	add	r20, r18
+ b46:	53 1f       	adc	r21, r19
  * @brief sends a char through serial
  * @param data will be sent trough serial
  */
 inline void usart_send_char(char data)
 {
     while(!(UCSR0A & (1<<UDRE0)));
- b40:	e0 ec       	ldi	r30, 0xC0	; 192
- b42:	f0 e0       	ldi	r31, 0x00	; 0
+ b48:	e0 ec       	ldi	r30, 0xC0	; 192
+ b4a:	f0 e0       	ldi	r31, 0x00	; 0
     UDR0 = data;
- b44:	c6 ec       	ldi	r28, 0xC6	; 198
- b46:	d0 e0       	ldi	r29, 0x00	; 0
+ b4c:	c6 ec       	ldi	r28, 0xC6	; 198
+ b4e:	d0 e0       	ldi	r29, 0x00	; 0
  * @brief sends a buffer through serial. Max lenght is 255.
  */
 inline void usart_send_buffer(uint8_t *b, uint8_t lenght)
 {
     uint8_t i = 0;
     while(i < lenght) usart_send_char(b[i++]);
- b48:	2d 91       	ld	r18, X+
+ b50:	2d 91       	ld	r18, X+
  * @brief sends a char through serial
  * @param data will be sent trough serial
  */
 inline void usart_send_char(char data)
 {
     while(!(UCSR0A & (1<<UDRE0)));
- b4a:	90 81       	ld	r25, Z
- b4c:	95 ff       	sbrs	r25, 5
- b4e:	fd cf       	rjmp	.-6      	; 0xb4a <usart_send_buffer+0x24>
+ b52:	90 81       	ld	r25, Z
+ b54:	95 ff       	sbrs	r25, 5
+ b56:	fd cf       	rjmp	.-6      	; 0xb52 <usart_send_buffer+0x24>
     UDR0 = data;
- b50:	28 83       	st	Y, r18
+ b58:	28 83       	st	Y, r18
  * @brief sends a buffer through serial. Max lenght is 255.
  */
 inline void usart_send_buffer(uint8_t *b, uint8_t lenght)
 {
     uint8_t i = 0;
     while(i < lenght) usart_send_char(b[i++]);
- b52:	a4 17       	cp	r26, r20
- b54:	b5 07       	cpc	r27, r21
- b56:	c1 f7       	brne	.-16     	; 0xb48 <usart_send_buffer+0x22>
+ b5a:	a4 17       	cp	r26, r20
+ b5c:	b5 07       	cpc	r27, r21
+ b5e:	c1 f7       	brne	.-16     	; 0xb50 <usart_send_buffer+0x22>
 }
- b58:	df 91       	pop	r29
- b5a:	cf 91       	pop	r28
- b5c:	08 95       	ret
+ b60:	df 91       	pop	r29
+ b62:	cf 91       	pop	r28
+ b64:	08 95       	ret
 
-00000b5e <usart_init>:
+00000b66 <usart_init>:
  * @endcode
  */
 inline void usart_init(uint16_t ubrr, uint8_t rx, uint8_t tx)
 {
     // set BAUDRATE
     UBRR0H = (uint8_t)(ubrr >>8);
- b5e:	90 93 c5 00 	sts	0x00C5, r25	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
+ b66:	90 93 c5 00 	sts	0x00C5, r25	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
     UBRR0L = (uint8_t)ubrr;
- b62:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
+ b6a:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
     
     // Enable RX and TX
     UCSR0B = ((rx&1)<<RXEN0) | ((tx&1)<<TXEN0);
- b66:	e6 2f       	mov	r30, r22
- b68:	e1 70       	andi	r30, 0x01	; 1
- b6a:	f0 e0       	ldi	r31, 0x00	; 0
- b6c:	e2 95       	swap	r30
- b6e:	f2 95       	swap	r31
- b70:	f0 7f       	andi	r31, 0xF0	; 240
- b72:	fe 27       	eor	r31, r30
- b74:	e0 7f       	andi	r30, 0xF0	; 240
- b76:	fe 27       	eor	r31, r30
- b78:	24 2f       	mov	r18, r20
- b7a:	21 70       	andi	r18, 0x01	; 1
- b7c:	30 e0       	ldi	r19, 0x00	; 0
- b7e:	22 0f       	add	r18, r18
- b80:	33 1f       	adc	r19, r19
- b82:	22 0f       	add	r18, r18
- b84:	33 1f       	adc	r19, r19
+ b6e:	e6 2f       	mov	r30, r22
+ b70:	e1 70       	andi	r30, 0x01	; 1
+ b72:	f0 e0       	ldi	r31, 0x00	; 0
+ b74:	e2 95       	swap	r30
+ b76:	f2 95       	swap	r31
+ b78:	f0 7f       	andi	r31, 0xF0	; 240
+ b7a:	fe 27       	eor	r31, r30
+ b7c:	e0 7f       	andi	r30, 0xF0	; 240
+ b7e:	fe 27       	eor	r31, r30
+ b80:	24 2f       	mov	r18, r20
+ b82:	21 70       	andi	r18, 0x01	; 1
+ b84:	30 e0       	ldi	r19, 0x00	; 0
  b86:	22 0f       	add	r18, r18
  b88:	33 1f       	adc	r19, r19
- b8a:	2e 2b       	or	r18, r30
- b8c:	20 93 c1 00 	sts	0x00C1, r18	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
- b90:	08 95       	ret
+ b8a:	22 0f       	add	r18, r18
+ b8c:	33 1f       	adc	r19, r19
+ b8e:	22 0f       	add	r18, r18
+ b90:	33 1f       	adc	r19, r19
+ b92:	2e 2b       	or	r18, r30
+ b94:	20 93 c1 00 	sts	0x00C1, r18	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
+ b98:	08 95       	ret
 
-00000b92 <__adddi3_s8>:
- b92:	00 24       	eor	r0, r0
- b94:	a7 fd       	sbrc	r26, 7
- b96:	00 94       	com	r0
- b98:	2a 0f       	add	r18, r26
- b9a:	30 1d       	adc	r19, r0
- b9c:	40 1d       	adc	r20, r0
- b9e:	50 1d       	adc	r21, r0
- ba0:	60 1d       	adc	r22, r0
- ba2:	70 1d       	adc	r23, r0
- ba4:	80 1d       	adc	r24, r0
- ba6:	90 1d       	adc	r25, r0
- ba8:	08 95       	ret
+00000b9a <__adddi3_s8>:
+ b9a:	00 24       	eor	r0, r0
+ b9c:	a7 fd       	sbrc	r26, 7
+ b9e:	00 94       	com	r0
+ ba0:	2a 0f       	add	r18, r26
+ ba2:	30 1d       	adc	r19, r0
+ ba4:	40 1d       	adc	r20, r0
+ ba6:	50 1d       	adc	r21, r0
+ ba8:	60 1d       	adc	r22, r0
+ baa:	70 1d       	adc	r23, r0
+ bac:	80 1d       	adc	r24, r0
+ bae:	90 1d       	adc	r25, r0
+ bb0:	08 95       	ret
 
-00000baa <_exit>:
- baa:	f8 94       	cli
+00000bb2 <_exit>:
+ bb2:	f8 94       	cli
 
-00000bac <__stop_program>:
- bac:	ff cf       	rjmp	.-2      	; 0xbac <__stop_program>
+00000bb4 <__stop_program>:
+ bb4:	ff cf       	rjmp	.-2      	; 0xbb4 <__stop_program>

@@ -19,8 +19,8 @@ void bt_send_package(void)
   mpackage.data.BatteryVoltage = control.BatteryVoltage;
   mpackage.data.MotorTemperature = control.MotorTemperature;
   mpackage.data.BatteryTemperature = control.BatteryTemperature;
-  mpackage.data.MotorRPM = 0;
-  mpackage.data.WaterSpeed = 0;
+  mpackage.data.MotorRPM = 1;
+  mpackage.data.WaterSpeed = 12;
   mpackage.data.Torque1 = 0;
   mpackage.data.Torque2 = 0;
   mpackage.sum = calculate_check_sum( (uint8_t*) & (mpackage.data), sizeof(mpackage.data));

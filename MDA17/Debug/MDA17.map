@@ -334,7 +334,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xbae
+.text           0x00000000      0xbb6
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vectors
@@ -468,47 +468,47 @@ END GROUP
                 0x0000079a       0x36 src/bt.o
                 0x0000079a                calculate_check_sum
  .text.bt_send_package
-                0x000007d0       0xfa src/bt.o
+                0x000007d0      0x102 src/bt.o
                 0x000007d0                bt_send_package
  .text.can_app_extractor_mcc17_1_mppt
-                0x000008ca       0x10 src/can_app.o
-                0x000008ca                can_app_extractor_mcc17_1_mppt
+                0x000008d2       0x10 src/can_app.o
+                0x000008d2                can_app_extractor_mcc17_1_mppt
  .text.can_app_task
-                0x000008da       0x7e src/can_app.o
-                0x000008da                can_app_task
+                0x000008e2       0x7e src/can_app.o
+                0x000008e2                can_app_task
  .text.machine_init
-                0x00000958       0x1e src/machine.o
-                0x00000958                machine_init
+                0x00000960       0x1e src/machine.o
+                0x00000960                machine_init
  .text.machine_run
-                0x00000976      0x112 src/machine.o
-                0x00000976                machine_run
+                0x0000097e      0x112 src/machine.o
+                0x0000097e                machine_run
  .text.__vector_7
-                0x00000a88       0x1e src/machine.o
-                0x00000a88                __vector_7
+                0x00000a90       0x1e src/machine.o
+                0x00000a90                __vector_7
  .text.wdt_init
-                0x00000aa6       0x16 src/main.o
-                0x00000aa6                wdt_init
+                0x00000aae       0x16 src/main.o
+                0x00000aae                wdt_init
  .text.sleep_init
-                0x00000abc        0x8 src/main.o
-                0x00000abc                sleep_init
- .text.main     0x00000ac4       0x56 src/main.o
-                0x00000ac4                main
+                0x00000ac4        0x8 src/main.o
+                0x00000ac4                sleep_init
+ .text.main     0x00000acc       0x56 src/main.o
+                0x00000acc                main
  .text.__vector_default
-                0x00000b1a        0xc src/main.o
-                0x00000b1a                __vector_default
+                0x00000b22        0xc src/main.o
+                0x00000b22                __vector_default
  .text.usart_send_buffer
-                0x00000b26       0x38 src/usart.o
-                0x00000b26                usart_send_buffer
+                0x00000b2e       0x38 src/usart.o
+                0x00000b2e                usart_send_buffer
  .text.usart_init
-                0x00000b5e       0x34 src/usart.o
-                0x00000b5e                usart_init
- .text.libgcc   0x00000b92       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
-                0x00000b92                __adddi3_s8
-                0x00000baa                . = ALIGN (0x2)
+                0x00000b66       0x34 src/usart.o
+                0x00000b66                usart_init
+ .text.libgcc   0x00000b9a       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_adddi3_s8.o)
+                0x00000b9a                __adddi3_s8
+                0x00000bb2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000baa        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000baa                _exit
-                0x00000baa                exit
+ .fini9         0x00000bb2        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000bb2                _exit
+                0x00000bb2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -527,11 +527,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000baa        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000bb2        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000bae                _etext = .
+                0x00000bb6                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000bae
+.data           0x00800100        0x0 load address 0x00000bb6
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -577,8 +577,8 @@ END GROUP
                 0x0080021c                total_errors
                 0x0080021d                can_app_send_motor_clk_div
                 0x0080021e                PROVIDE (__bss_end, .)
-                0x00000bae                __data_load_start = LOADADDR (.data)
-                0x00000bae                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000bb6                __data_load_start = LOADADDR (.data)
+                0x00000bb6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080021e        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
