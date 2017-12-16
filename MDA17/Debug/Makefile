@@ -44,7 +44,6 @@ C_SRCS +=  \
 ../src/can_app.c \
 ../src/machine.c \
 ../src/main.c \
-../src/PeO.c \
 ../src/usart.c
 
 
@@ -60,7 +59,6 @@ src/bt.o \
 src/can_app.o \
 src/machine.o \
 src/main.o \
-src/PeO.o \
 src/usart.o
 
 OBJS_AS_ARGS +=  \
@@ -69,7 +67,6 @@ src/bt.o \
 src/can_app.o \
 src/machine.o \
 src/main.o \
-src/PeO.o \
 src/usart.o
 
 C_DEPS +=  \
@@ -78,7 +75,6 @@ src/bt.d \
 src/can_app.d \
 src/machine.d \
 src/main.d \
-src/PeO.d \
 src/usart.d
 
 C_DEPS_AS_ARGS +=  \
@@ -87,7 +83,6 @@ src/bt.d \
 src/can_app.d \
 src/machine.d \
 src/main.d \
-src/PeO.d \
 src/usart.d
 
 OUTPUT_FILE_PATH +=MDA17.elf
@@ -105,8 +100,6 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-
-
 
 
 

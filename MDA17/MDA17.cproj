@@ -188,12 +188,6 @@
     <Compile Include="src\main.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\PeO.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="src\PeO.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\sleep.h">
       <SubType>compile</SubType>
     </Compile>

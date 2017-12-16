@@ -86,7 +86,7 @@ inline void can_app_msg_extractors_switch(can_t *msg)
                 break;
             default:
                 //VERBOSE_MSG_CAN_APP(usart_send_string("got a unknown msg: "));
-                VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
+                //VERBOSE_MSG_CAN_APP(can_app_print_msg(msg));
                 break;
         }    
     }
