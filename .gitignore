@@ -1,0 +1,7 @@
+#ignore everything
+*~
+#but not these files
+#Descrição dos arquivos´pastas a serem ignorados
+
+
+*.sh
