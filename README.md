@@ -1,4 +1,2 @@
-<h1> MAD17 </h1>
-<p>
-jwdvhdwv
-</p>
+# Módulo de Aquisição de Dados 2017
+Versão da aquisição de dados da embarcação Guarapuvu II (Zênite Solar) para o DSB 2017.
